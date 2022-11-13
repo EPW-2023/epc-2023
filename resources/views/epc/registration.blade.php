@@ -171,11 +171,7 @@
                                         </p>
                                     </li>
                                     <li>
-                                        <p><b>BRI</b> : 0212-01-052658-50-1 a.n Nelva Citra Saini
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <p><b>OVO</b> : 082157156299 a.n Nelva Citra Saini
+                                        <p><b>OVO</b> : 08980177393  a.n dhea tirta ananta
                                         </p>
                                     </li>
                                 </ul>

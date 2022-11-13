@@ -108,14 +108,14 @@ class ApplicantController extends Controller
             $nama_bukti_pembayaran
         );
 
-        $applicantFileData['foto_ketua'] = $nama_foto_ketua;
-        $applicantFileData['foto_anggota1'] = $nama_foto_anggota1;
-        $applicantFileData['kartu_pelajar_ketua'] = $nama_kartu_pelajar_ketua;
-        $applicantFileData[
+        $applicantsData['foto_ketua'] = $nama_foto_ketua;
+        $applicantsData['foto_anggota1'] = $nama_foto_anggota1;
+        $applicantsData['kartu_pelajar_ketua'] = $nama_kartu_pelajar_ketua;
+        $applicantsData[
             'kartu_pelajar_anggota1'
         ] = $nama_kartu_pelajar_anggota1;
-        $applicantFileData['bukti_pembayaran'] = $nama_bukti_pembayaran;
-        $applicantFileData['nama_pemilik_rekening'] =
+        $applicantsData['bukti_pembayaran'] = $nama_bukti_pembayaran;
+        $applicantsData['nama_pemilik_rekening'] =
             $request->nama_pemilik_rekening;
 
         Applicant::create($applicantsData);

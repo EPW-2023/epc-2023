@@ -55,6 +55,11 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link " href="{{ route('admin-team') }}">
+                    <span>Uploaded Files</span>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link " href="/admin/registration-fee">
                     <span>Registration Fee</span>
                 </a>

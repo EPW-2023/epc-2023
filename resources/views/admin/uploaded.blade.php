@@ -1,12 +1,12 @@
 @extends('layout.admin')
 @section('admin')
-    <h1>Applicant</h1>
+    <h1>Uploaded Files</h1>
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th scope="col" class="text-center">Nama Tim</th>
-                <th scope="col" class="text-center">Nama Ketua</th>
-                <th scope="col" class="text-center">NISN Ketua</th>
+                <th scope="col" class="text-center">Foto Ketua</th>
+                <th scope="col" class="text-center">Foto Anggota 1</th>
+                <th scope="col" class="text-center">Kartu Pelajar Ketua</th>
                 <th scope="col" class="text-center">Nama Anggota 1</th>
                 <th scope="col" class="text-center">NISN Anggota 1</th>
                 <th scope="col" class="text-center">Email Ketua</th>
