@@ -1,0 +1,15 @@
+.bg-dashboard {
+ background-color: #212384;
+ height: 100vh;
+
+ .dashboard-body {
+  background: rgba(255, 255, 255, 0.5);
+  // box-shadow: 8px 6px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(25px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 13px;
+  height: 432px;
+  width: 732px;
+ }
+}

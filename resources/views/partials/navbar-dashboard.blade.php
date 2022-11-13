@@ -9,19 +9,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link nav-link-epw" id="nav-link-epw" href="#">Home</a>
+                    <a class="nav-link nav-link-epw" id="nav-link-epw" href="#">DASHBOARD</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-epw" id="nav-link-epw" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-epw" id="nav-link-epw" href="#">EPC</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-epw" id="nav-link-epw" href="#">INJECTION</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-epw" id="nav-link-epw" href="#">MERCH</a>
+                    <a class="nav-link nav-link-epw" id="nav-link-epw" href="#">LOGOUT</a>
                 </li>
             </ul>
         </div>
