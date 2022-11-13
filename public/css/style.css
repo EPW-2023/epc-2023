@@ -193,6 +193,61 @@
   width: 732px;
 }
 
+.epc-card {
+  position: absolute;
+  z-index: -2;
+}
+
+.card-text {
+  font-family: "Inter", sans-serif !important;
+  color: #fff;
+  position: absolute;
+  z-index: 1;
+  height: 600px;
+  width: 1050px;
+  background-color: #20207B;
+  border-radius: 31px;
+}
+
+.card-header-wrapper {
+  padding: 20px 45px;
+}
+
+.card-logo-section {
+  gap: 24.3px;
+  display: flex;
+  align-items: center;
+}
+.card-logo-section p {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.card-team-section {
+  margin-left: -77px;
+}
+.card-team-section h3 {
+  margin: 0;
+  font-size: 64px;
+  font-weight: 600;
+}
+.card-team-section h4 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.card-logo-epc {
+  display: flex;
+  align-items: center;
+}
+
+.white-divider {
+  background-color: #fff;
+  height: 2px;
+}
+
 nav {
   padding: 20px 20px !important;
 }

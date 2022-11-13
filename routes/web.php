@@ -3,6 +3,8 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ApplicantController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CardController;
+use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\RegistrationFeeController;
 use Illuminate\Support\Facades\Route;
 
@@ -51,6 +53,33 @@ Route::middleware(['auth', 'role:Dev,Admin'])->group(function () {
             'admin-team'
         );
         Route::resource('/registration-fee', RegistrationFeeController::class);
+
+        //UPLOADED FILES
+        Route::get('/uploaded-files', [
+            DownloadController::class,
+            'index',
+        ])->name('uploaded-file');
+        //ROUTE UPLOADED FILES
+        Route::get('/download-foto-ketua/{applicant:id}', [
+            DownloadController::class,
+            'downloadFotoKetua',
+        ]);
+        Route::get('/download-foto-anggota1/{applicant:id}', [
+            DownloadController::class,
+            'downloadFotoAnggota1',
+        ]);
+        Route::get('/download-kartu-pelajar-ketua/{applicant:id}', [
+            DownloadController::class,
+            'downloadKartuPelajarKetua',
+        ]);
+        Route::get('/download-kartu-pelajar-anggota1/{applicant:id}', [
+            DownloadController::class,
+            'downloadKartuPelajarAnggota1',
+        ]);
+        Route::get('/download-bukti-pembayaran/{applicant:id}', [
+            DownloadController::class,
+            'downloadBuktiPembayaran',
+        ]);
     });
 });
 Route::middleware(['auth', 'role:Dev,Admin,Guest'])->group(function () {});
@@ -60,3 +89,7 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('admin-logout');
 Route::get('/dashboard', function () {
     return view('epc.dashboard');
 });
+Route::get('/registration-card', function () {
+    return view('epc.card');
+});
+// Route::get('/generate-card', [CardController::class, 'getCard']);

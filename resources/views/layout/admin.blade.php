@@ -55,7 +55,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="{{ route('admin-team') }}">
+                <a class="nav-link " href="{{ route('uploaded-file') }}">
                     <span>Uploaded Files</span>
                 </a>
             </li>
