@@ -173,6 +173,13 @@
   padding: 25px 50px;
 }
 
+.bg-epc-registered {
+  background-color: #212384;
+  height: 100vh;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+}
+
 .bg-dashboard {
   background-color: #212384;
   height: 100vh;
