@@ -90,6 +90,8 @@ Route::get('/dashboard', function () {
     return view('epc.dashboard');
 });
 Route::get('/registration-card', function () {
-    return view('epc.card');
+    return view('epc.card', [
+        'nama' => 'Faiz Rahmadani',
+        'reg' => '5009201112',
+    ]);
 });
-// Route::get('/generate-card', [CardController::class, 'getCard']);

@@ -182,15 +182,55 @@
 
 .bg-dashboard {
   background-color: #212384;
+  font-family: "Inter", sans-serif;
   height: 100vh;
+  z-index: -2;
 }
-.bg-dashboard .dashboard-body {
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(25px);
-  /* Note: backdrop-filter has minimal browser support */
-  border-radius: 13px;
-  height: 432px;
-  width: 732px;
+
+.dashboard-batik {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 0;
+}
+
+.body-dashboard {
+  color: white;
+  position: relative;
+  z-index: 1;
+  height: 500px;
+}
+.body-dashboard .edit-account {
+  text-decoration: none;
+  color: #BCBEC0;
+  font-size: 20px;
+}
+.body-dashboard .dashboard-selection {
+  margin-top: 1rem;
+}
+.body-dashboard .dashboard-selection .selection-option {
+  color: #000;
+  height: 100px;
+  width: 446px;
+  border-radius: 31px;
+  gap: 20px;
+  box-shadow: 0px 10px 50px 18px rgba(0, 0, 0, 0.1);
+}
+.body-dashboard .dashboard-selection .selection-option h3 {
+  margin: 0;
+  font-weight: bold;
+}
+.body-dashboard .guidebook {
+  background-color: #AEFDE8;
+}
+.body-dashboard .team-card {
+  background-color: #94FEFF;
+}
+.body-dashboard .kisi-kisi {
+  background-color: #FF61A7;
+}
+.body-dashboard .bank-soal {
+  background-color: #D872FF;
 }
 
 .epc-card {
@@ -205,7 +245,6 @@
   z-index: 1;
   height: 600px;
   width: 1050px;
-  background-color: #20207B;
   border-radius: 31px;
 }
 
@@ -229,7 +268,7 @@
 }
 .card-team-section h3 {
   margin: 0;
-  font-size: 64px;
+  font-size: 45px;
   font-weight: 600;
 }
 .card-team-section h4 {
