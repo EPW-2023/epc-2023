@@ -169,7 +169,7 @@
 }
 
 .login-card {
-  margin-top: 25vh;
+  margin-top: 13vh;
   padding: 25px 50px;
 }
 
@@ -200,7 +200,7 @@
   z-index: 1;
   height: 500px;
 }
-.body-dashboard .edit-account {
+.body-dashboard .registration-number {
   text-decoration: none;
   color: #BCBEC0;
   font-size: 20px;

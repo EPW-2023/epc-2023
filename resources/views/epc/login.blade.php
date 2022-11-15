@@ -1,10 +1,12 @@
 @extends('layout.layout')
 @section('content')
-    <div class="bg-login">
+    <div class="bg-dashboard">
+        <img src="{{ asset('img/bg-dashboard-batik.png') }}" class="dashboard-batik" alt="batik">
+        @include('partials.navbar-dashboard')
         <div class="d-flex justify-content-center">
             <div class="card login-card">
-                <h5 class="text-center mb-4">EPW 2023</h3>
-                    <form action="/admin-login" method="POST">
+                <h5 class="text-center mb-4">EPC Login</h3>
+                    <form action="/login" method="POST">
                         @csrf
                         <div class="mb-3">
                             <label for="username" class="form-label">Username</label>

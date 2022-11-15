@@ -12,7 +12,12 @@
                     <a class="nav-link nav-link-epw" id="nav-link-epw" href="#">DASHBOARD</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-epw" id="nav-link-epw" href="#">LOGOUT</a>
+                    <form action="{{ route('applicant-logout') }}" method="POST">
+                        @csrf
+                        <button type="submit" style="background-color: transparent; border: none">
+                            <a class="nav-link nav-link-epw" id="nav-link-epw">LOGOUT</a>
+                        </button>
+                    </form>
                 </li>
             </ul>
         </div>

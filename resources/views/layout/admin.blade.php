@@ -25,7 +25,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #34d399">
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #0ea5e9">
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('admin-index') }}">
                 <div class="sidebar-brand-text mx-3">EPW 2023</div>
@@ -50,8 +50,8 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="{{ route('admin-team') }}"">
-                    <span>Teams</span>
+                <a class="nav-link " href="/admin/verification">
+                    <span>Verification</span>
                 </a>
             </li>
             <li class="nav-item">

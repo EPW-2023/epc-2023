@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
             'password' =>
                 '$2a$12$tVKs/e9udXkYGgw2jEkCGu9bNP8QX7zRcRc.6jxSJwfnmS7hPm8le',
             'role' => 'Dev',
+            'verified' => 'true',
         ]);
     }
 }

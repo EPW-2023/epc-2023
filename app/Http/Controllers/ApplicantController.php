@@ -6,7 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Models\Applicant;
 use App\Models\RegistrationFee;
 use App\Models\User;
+use App\Models\Verified;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class ApplicantController extends Controller
@@ -15,6 +17,7 @@ class ApplicantController extends Controller
     {
         //display the registration page
         return view('epc.registration', [
+            'title' => 'EPC Registration',
             'registration_fee' => RegistrationFee::all(),
         ]);
     }
@@ -120,10 +123,45 @@ class ApplicantController extends Controller
 
         Applicant::create($applicantsData);
         User::create([
+            'namatim' => $applicantsData['namatim'],
             'username' => $applicantsData['username'],
             'password' => $applicantsData['password'],
         ]);
 
-        return redirect('/success');
+        return redirect('/login');
+    }
+
+    public function indexLogin()
+    {
+        return view('epc.login', [
+            'title' => 'EPC Login',
+        ]);
+    }
+    public function applicantAuth(Request $request)
+    {
+        $credentials = $request->validate([
+            'username' => ['required'],
+            'password' => ['required'],
+        ]);
+
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+            return redirect()->intended('/dashboard');
+        }
+
+        return redirect('/login')->with('LoginError', 'Login Failed!');
+    }
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        request()
+            ->session()
+            ->invalidate();
+        request()
+            ->session()
+            ->regenerateToken();
+
+        return redirect(route('applicant-login'));
     }
 }
