@@ -28,7 +28,7 @@
         <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #0ea5e9">
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('admin-index') }}">
-                <div class="sidebar-brand-text mx-3">EPW 2023</div>
+                <div class="sidebar-brand-text mx-3">EPC 2023</div>
             </a>
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
@@ -50,13 +50,13 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="/admin/verification">
-                    <span>Verification</span>
+                <a class="nav-link " href="{{ route('uploaded-file') }}">
+                    <span>Uploaded Files</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="{{ route('uploaded-file') }}">
-                    <span>Uploaded Files</span>
+                <a class="nav-link " href="{{ route('admin-verification') }}">
+                    <span>Verification</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -65,6 +65,14 @@
                 </a>
             </li>
             @if (auth()->user()->role == 'Dev')
+                <div class="sidebar-heading">
+                    Developer Only Feature
+                </div>
+                <li class="nav-item">
+                    <a class="nav-link " href="{{ route('admin-create-new-admin') }}">
+                        <span>Create New Admin</span>
+                    </a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link " href="{{ route('admin-user') }}">
                         <span>Users</span>
@@ -131,7 +139,8 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <span
+                                    class="mr-2 d-none d-lg-inline text-gray-600 small">{{ auth()->user()->username }}</span>
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -171,7 +180,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+                        <span>Copyright &copy; EPW ITS 2023</span>
                     </div>
                 </div>
             </footer>

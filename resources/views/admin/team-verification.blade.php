@@ -14,9 +14,9 @@
         <tbody>
             @foreach ($users as $user)
                 @php
-                    $status = 'Verified';
-                    if ($user->nomer_reg == 'EPC000') {
-                        $status = 'Not Verified';
+                    $status = 'Not Verified';
+                    if ($user->verified == 'true') {
+                        $status = 'Verified';
                     }
                 @endphp
                 <tr>
@@ -26,12 +26,11 @@
                     <td class="text-center">{{ $status }}</td>
                     <td class="text-center">
                         <div class="d-flex justify-content-center">
-                            <a href="/admin/verification/{{ $user->id }}/edit" class="btn btn-success">Verifiy</a>
+                            <a href="/admin/verification/{{ $user->id }}/edit" class="btn btn-success">Verify</a>
                         </div>
                     </td>
                 </tr>
             @endforeach
-
         </tbody>
     </table>
 @endsection

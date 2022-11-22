@@ -1,6 +1,7 @@
 @extends('layout.admin')
 @section('admin')
     <div class="container">
+        <h1> {{ $registration_fee->registration_fee }}</h1>
         <form action="/admin/registration-fee/{{ $registration_fee->id }}" method="POST">
             @method('put')
             @csrf

@@ -6,8 +6,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\RegistrationFeeController;
 use App\Http\Controllers\VerificationController;
-use App\Models\Applicant;
 use Illuminate\Support\Facades\Route;
+use Mockery\VerificationDirector;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,7 +57,20 @@ Route::middleware(['auth'])->group(function () {
     });
 });
 
-//Admin
+//Dev only
+Route::middleware(['auth', 'role:Dev'])->group(function () {
+    Route::prefix('admin')->group(function () {
+        Route::get('/create-new-admin', [
+            AdminController::class,
+            'newAdminCreate',
+        ])->name('admin-create-new-admin');
+        Route::post('/create-new-admin', [
+            AdminController::class,
+            'newAdminStore',
+        ])->name('newadmin-store');
+    });
+});
+//Dev and Admin
 Route::middleware(['auth', 'role:Dev,Admin'])->group(function () {
     Route::prefix('admin')->group(function () {
         Route::get('/', [AdminController::class, 'index'])->name('admin-index');
@@ -68,8 +81,22 @@ Route::middleware(['auth', 'role:Dev,Admin'])->group(function () {
             AdminController::class,
             'applicantIndex',
         ])->name('admin-applicant');
-        Route::resource('/verification', VerificationController::class);
+        //Editing Registration Fee Feature
         Route::resource('/registration-fee', RegistrationFeeController::class);
+
+        # Verification Feature
+        Route::get('verification', [
+            VerificationController::class,
+            'index',
+        ])->name('admin-verification');
+        Route::get('verification/{user:id}/edit', [
+            VerificationController::class,
+            'edit',
+        ]);
+        Route::put('verification/{user:id}', [
+            VerificationController::class,
+            'update',
+        ]);
 
         //UPLOADED FILES
         Route::get('/uploaded-files', [
@@ -103,12 +130,14 @@ Route::get('/admin-login', [AuthController::class, 'index'])->name('login');
 Route::post('/admin-login', [AuthController::class, 'authenticate']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('admin-logout');
 
-Route::get('/registration-card', function () {
-    return view('epc.card', [
-        'title' => 'Registration Card',
-        'nama' => 'Faiz Rahmadani',
-        'reg' => '5009201112',
-    ]);
+// Route::get('/registration-card', function () {
+//     return view('epc.card', [
+//         'title' => 'Registration Card',
+//         'nama' => 'Faiz Rahmadani',
+//         'reg' => '5009201112',
+//     ]);
+// });
+Route::fallback(function () {
+    $title = ['title' => 'Oops, Page Not Found'];
+    return view('errors.404', $title);
 });
-
-//VERIFICATION FEATURE

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\RegistrationFee;
 use App\Http\Controllers\Controller;
+use App\Models\Applicant;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class RegistrationFeeController extends Controller
@@ -58,10 +60,12 @@ class RegistrationFeeController extends Controller
      * @param  \App\Models\RegistrationFee  $registrationFee
      * @return \Illuminate\Http\Response
      */
-    public function edit(RegistrationFee $registrationFee)
-    {
+    public function edit(
+        RegistrationFee $registrationFee,
+    ) {
         return view('admin.edit-registration-fee', [
             'registration_fee' => $registrationFee,
+    
         ]);
     }
 

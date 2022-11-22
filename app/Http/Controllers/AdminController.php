@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Applicant;
 use App\Models\RegistrationFee;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
@@ -46,8 +48,20 @@ class AdminController extends Controller
         ]);
     }
 
-    //update method regFee
-    public function update(Request $request, $id)
+    //Create New Admin Methods
+    public function newAdminCreate()
     {
+        return view('admin.create-admin');
+    }
+    public function newAdminStore(Request $request)
+    {
+        $validatedData = $request->validate([
+            'username' => ['required'],
+            'password' => ['required'],
+        ]);
+        $validatedData['password'] = Hash::make($validatedData['password']);
+        $validatedData['role'] = 'Admin';
+        User::create($validatedData);
+        return redirect(route('admin-index'));
     }
 }
