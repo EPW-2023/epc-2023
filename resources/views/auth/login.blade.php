@@ -3,7 +3,7 @@
     <div class="bg-login">
         <div class="d-flex justify-content-center">
             <div class="card login-card">
-                <h5 class="text-center mb-4">EPW 2023</h3>
+                <h5 class="text-center mb-4">EPC ADMIN LOGIN</h3>
                     <form action="/admin-login" method="POST">
                         @csrf
                         <div class="mb-3">
