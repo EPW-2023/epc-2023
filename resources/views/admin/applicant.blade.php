@@ -4,6 +4,8 @@
     <table class="table table-bordered">
         <thead>
             <tr>
+                <th scope="col" class="text-center">Sekolah</th>
+                <th scope="col" class="text-center">Kota</th>
                 <th scope="col" class="text-center">Nama Tim</th>
                 <th scope="col" class="text-center">Nama Ketua</th>
                 <th scope="col" class="text-center">NISN Ketua</th>
@@ -16,6 +18,8 @@
         <tbody>
             @foreach ($applicants as $item)
                 <tr>
+                    <td class="text-center">{{ $item->asalsekolah }}</td>
+                    <td class="text-center">{{ $item->kota }}</td>
                     <td class="text-center">{{ $item->namatim }}</td>
                     <td class="text-center">{{ $item->nama_ketua }}</td>
                     <td class="text-center">{{ $item->nisn_ketua }}</td>
