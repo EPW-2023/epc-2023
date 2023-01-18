@@ -13,6 +13,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     <title>EPW 2023 | {{ $title }}</title>
+    {{-- @vite([])   --}}
 </head>
 
 <body>

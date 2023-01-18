@@ -18,15 +18,31 @@
                                 <label for="namatim" class="form-label">
                                     Nama Tim
                                 </label>
-                                <input required type="text" class="form-control" id="namatim" name="namatim"
-                                    placeholder="Nama Tim">
+                                <input type="text"
+                                    class="form-control @error('namatim')
+                                    is-invalid
+                                @enderror"
+                                    id="namatim" name="namatim" placeholder="Nama Tim">
+                                @error('namatim')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </div>
                             <div class="col-md-6">
                                 <label for="password" class="form-label">
                                     Password
                                 </label>
-                                <input required type="password" class="form-control" id="password" name="password"
-                                    placeholder="Password">
+                                <input type="password"
+                                    class="form-control @error('password')
+                                    is-invalid
+                                @enderror"
+                                    id="password" name="password" placeholder="Password">
+                                @error('password')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -34,14 +50,22 @@
                                 <label for="username" class="form-label">
                                     Username Tim
                                 </label>
-                                <input required type="text" class="form-control" id="usernametim" name="username"
-                                    placeholder="Username Tim">
+                                <input type="text"
+                                    class="form-control @error('username')
+                                    is-invalid
+                                @enderror"
+                                    id="usernametim" name="username" placeholder="Username Tim">
+                                @error('username')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </div>
                             <div class="col-md-6">
                                 <label for="confpassword" class="form-label">
                                     Confirm Password
                                 </label>
-                                <input required type="password" class="form-control" id="confpassword" name="confpassword"
+                                <input type="password" class="form-control" id="confpassword" name="confpassword"
                                     placeholder="Confirm Password">
                             </div>
                         </div>
@@ -52,15 +76,31 @@
                                 <label for="asalsekolah" class="form-label">
                                     Asal Sekolah
                                 </label>
-                                <input required type="text" class="form-control" id="asalsekolah" name="asalsekolah"
-                                    placeholder="Asal Sekolah">
+                                <input type="text"
+                                    class="form-control @error('asalsekolah')
+                                    is-invalid
+                                @enderror"
+                                    id="asalsekolah" name="asalsekolah" placeholder="Asal Sekolah">
+                                @error('asalsekolah')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </div>
                             <div class="col-md-6">
                                 <label for="kota" class="form-label">
                                     Kota
                                 </label>
-                                <input required type="text" class="form-control" id="kota" name="kota"
-                                    placeholder="Kota">
+                                <input type="text"
+                                    class="form-control @error('kota')
+                                    is-invalid
+                                @enderror"
+                                    id="kota" name="kota" placeholder="Kota">
+                                @error('kota')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </div>
                         </div>
                         <div class="my-4"></div>
@@ -71,15 +111,31 @@
                                 <label for="nama_ketua" class="form-label">
                                     Nama Ketua
                                 </label>
-                                <input required type="text" class="form-control" id="nama_ketua" name="nama_ketua"
-                                    placeholder="Nama Ketua">
+                                <input type="text"
+                                    class="form-control @error('nama_ketua')
+                                    is-invalid
+                                @enderror"
+                                    id="nama_ketua" name="nama_ketua" placeholder="Nama Ketua">
+                                @error('nama_ketua')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </div>
                             <div class="col-md-6">
                                 <label for="nisn_ketua" class="form-label">
                                     NISN Ketua
                                 </label>
-                                <input required type="text" class="form-control" id="nisn_ketua" name="nisn_ketua"
-                                    placeholder="NISN Ketua">
+                                <input type="text"
+                                    class="form-control @error('nisn_ketua')
+                                    is-invalid
+                                @enderror"
+                                    id="nisn_ketua" name="nisn_ketua" placeholder="NISN Ketua">
+                                @error('nisn_ketua')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -87,15 +143,31 @@
                                 <label for="nohp_ketua" class="form-label">
                                     No. HP
                                 </label>
-                                <input required type="text" class="form-control" id="nohp_ketua" name="nohp_ketua"
-                                    placeholder="No HP">
+                                <input type="text"
+                                    class="form-control @error('nohp_ketua')
+                                    is-invalid
+                                @enderror"
+                                    id="nohp_ketua" name="nohp_ketua" placeholder="No HP">
+                                @error('nohp_ketua')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </div>
                             <div class="col-md-6">
                                 <label for="email_ketua" class="form-label">
                                     Email
                                 </label>
-                                <input required type="email" class="form-control" id="email_ketua" name="email_ketua"
-                                    placeholder="Email">
+                                <input type="email"
+                                    class="form-control @error('email_ketua')
+                                    is-invalid
+                                @enderror"
+                                    id="email_ketua" name="email_ketua" placeholder="Email">
+                                @error('nohp_ketua')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </div>
                         </div>
                         {{-- End of Ketua --}}
@@ -107,32 +179,63 @@
                                 <label for="nama_anggota1" class="form-label">
                                     Nama Anggota 1
                                 </label>
-                                <input required type="text" class="form-control" id="nama_anggota1"
-                                    name="nama_anggota1" placeholder="Nama Anggota 1">
+                                <input type="text"
+                                    class="form-control @error('nama_anggota1')
+                                    is-invalid
+                                @enderror"
+                                    id="nama_anggota1" name="nama_anggota1" placeholder="Nama Anggota 1">
+                                @error('nama_anggota1')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </div>
                             <div class="col-md-6">
                                 <label for="nisn_anggota1" class="form-label">
                                     NISN
                                 </label>
-                                <input required type="text" class="form-control" id="nisn_anggota1"
-                                    name="nisn_anggota1" placeholder="NISN Anggota 1">
+                                <input type="text"
+                                    class="form-control @error('nisn_anggota1')
+                                    is-invalid
+                                @enderror"
+                                    id="nisn_anggota1" name="nisn_anggota1" placeholder="NISN Anggota 1">
+                                @error('nisn_anggota1')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </div>
                         </div>
                         {{-- End of Anggota 1 --}}
-
                         {{-- Berkas --}}
-                        <div class="section-form mb-3">3. Dokumen Pendukung</div>
+                        <div class="section-form mt-2 mb-3">3. Dokumen Pendukung</div>
                         <div class="row mb-3">
                             <div class="col-md-6">
                                 <label for="upload_pas_foto" class="form-label fs-5 d-block">
                                     Pas Foto 4x3
                                 </label>
                                 <label for="foto_ketua" class="form-label">Ketua</label>
-                                <input required type="file" class="form-control mb-3" id="foto_ketua"
-                                    name="foto_ketua">
+                                <input type="file"
+                                    class="form-control @error('foto_ketua')
+                                    is-invalid
+                                @enderror mb-3"
+                                    id="foto_ketua" name="foto_ketua">
+                                @error('foto_ketua')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                                 <label for="foto_anggota1" class="form-label">Anggota 1</label>
-                                <input required type="file" class="form-control" id="foto_anggota1"
-                                    name="foto_anggota1">
+                                <input type="file"
+                                    class="form-control mb-3 @error('foto_anggota1')
+                                is-invalid
+                            @enderror"
+                                    id="foto_anggota1" name="foto_anggota1">
+                                @error('foto_anggota1')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                                 <div class="small">
                                     <label class="form-label mt-2 d-block">Format Penamaan :
                                         pasfoto_[posisi]_[nama]</label>
@@ -144,11 +247,27 @@
                                     Scan Kartu Pelajar
                                 </label>
                                 <label for="kartu_pelajar_ketua" class="form-label">Ketua</label>
-                                <input required type="file" class="form-control mb-3" id="kartu_pelajar_ketua"
-                                    name="kartu_pelajar_ketua">
-                                <label for="kartu_pelajar_anggota1" class="form-label">Anggota 1</label>
-                                <input required type="file" class="form-control" id="kartu_pelajar_anggota1"
-                                    name="kartu_pelajar_anggota1">
+                                <input type="file"
+                                    class="form-control mb-3 @error('kartu_pelajar_ketua')
+                                is-invalid
+                            @enderror"
+                                    id="kartu_pelajar_ketua" name="kartu_pelajar_ketua">
+                                @error('kartu_pelajar_ketua')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                                <label for="kartu_pelajar_anggota1 " class="form-label">Anggota 1</label>
+                                <input type="file"
+                                    class="form-control mb-3 @error('kartu_pelajar_anggota1')
+                                is-invalid
+                            @enderror"
+                                    id="kartu_pelajar_anggota1" name="kartu_pelajar_anggota1">
+                                @error('kartu_pelajar_anggota1')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                                 <div class="small">
                                     <label class="form-label mt-2 d-block">Format Penamaan :
                                         kartupelajar_[posisi]_[nama]</label>
@@ -171,7 +290,7 @@
                                         </p>
                                     </li>
                                     <li>
-                                        <p><b>OVO</b> : 08980177393  a.n dhea tirta ananta
+                                        <p><b>OVO</b> : 08980177393 a.n dhea tirta ananta
                                         </p>
                                     </li>
                                 </ul>
@@ -182,15 +301,32 @@
                                 <label for="nama_pemilik_rekening" class="form-label">
                                     Nama Pemilik Rekening
                                 </label>
-                                <input required type="text" class="form-control" id="nama_pemilik_rekening"
-                                    name="nama_pemilik_rekening" placeholder="Contoh : FAIZ RAHMADANI">
+                                <input type="text"
+                                    class="form-control @error('nama_pemilik_rekening')
+                                    is-invalid
+                                @enderror"
+                                    id="nama_pemilik_rekening" name="nama_pemilik_rekening"
+                                    placeholder="Contoh : FAIZ RAHMADANI">
+                                @error('nama_pemilik_rekening')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </div>
                             <div class="col-md-6">
                                 <label for="bukti_pembayaran" class="form-label">
                                     Bukti Pembayaran
                                 </label>
-                                <input required type="file" class="form-control" id="bukti_pembayaran"
-                                    name="bukti_pembayaran">
+                                <input type="file"
+                                    class="form-control  @error('bukti_pembayaran')
+                                is-invalid
+                            @enderror"
+                                    id="bukti_pembayaran" name="bukti_pembayaran">
+                                @error('bukti_pembayaran')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                                 <div class="small">
                                     <label class="form-label mt-2 d-block">Format Penamaan :
                                         bukti_bayar_[nama]</label>
@@ -201,7 +337,7 @@
                         {{-- End of Pembayaran --}}
                         {{-- Checkbox accepting terms --}}
                         <div class="my-3 form-check">
-                            <input class="form-check-input" type="checkbox" id="agreement" required>
+                            <input class="form-check-input" type="checkbox" id="agreement">
                             <label class="form-check-label" for="agreement">
                                 Saya menyatakan bahwa data/informasi/berkas yang saya sampaikan pada formulir ini adalah
                                 benar

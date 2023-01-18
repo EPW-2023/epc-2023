@@ -38,8 +38,8 @@ class ApplicantController extends Controller
             'nisn_anggota1' => ['required'],
             'foto_ketua' => ['required', 'mimes:jpg,jpeg,png'], //file
             'foto_anggota1' => ['required', 'mimes:jpg,jpeg,png'], //file
-            'kartu_pelajar_ketua' => ['required', 'mimes:jpg,jpeg,png'], //file
-            'kartu_pelajar_anggota1' => ['required', 'mimes:jpg,jpeg,png'], //file
+            'kartu_pelajar_ketua' => ['required', 'mimes:jpg,jpeg,png,pdf'], //file
+            'kartu_pelajar_anggota1' => ['required', 'mimes:jpg,jpeg,png,pdf'], //file
             'nama_pemilik_rekening' => ['required'],
             'bukti_pembayaran' => ['required', 'mimes:jpg,jpeg,png'], //file
         ]);

@@ -9,19 +9,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link nav-link-epw" id="nav-link-epw" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-epw" id="nav-link-epw" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-epw" id="nav-link-epw" href="#">EPC</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-epw" id="nav-link-epw" href="#">INJECTION</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-epw" id="nav-link-epw" href="#">MERCH</a>
+                    <a class="nav-link nav-link-epw" id="nav-link-epw" href="/login">LOGIN</a>
                 </li>
             </ul>
         </div>
@@ -35,11 +23,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-center">
-                    <a href="#" class="d-block text-decoration-none my-2 link-modal">Home</a>
-                    <a href="#" class="d-block text-decoration-none my-2 link-modal">About</a>
-                    <a href="#" class="d-block text-decoration-none my-2 link-modal">EPC</a>
-                    <a href="#" class="d-block text-decoration-none my-2 link-modal">INJECTION</a>
-                    <a href="#" class="d-block text-decoration-none my-2 link-modal">Merch</a>
+                    <a href="/login" class="d-block text-decoration-none my-2 link-modal">LOGIN</a>
                 </div>
             </div>
         </div>
