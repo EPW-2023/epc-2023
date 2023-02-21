@@ -232,6 +232,10 @@
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
 
+    {{-- Table 2 Excel --}}
+    <script src="{{ asset('js/table2excel.js') }}"></script>
+    {{-- Personal Scripts --}}
+    <script src="{{ asset('js/script.js') }}"></script>
 </body>
 
 </html>
