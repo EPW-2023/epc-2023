@@ -3,7 +3,7 @@
     <h1>Applicant</h1>
     <div class="card">
         <div class="card-header d-flex justify-content-between">
-            <h3 class="card-title">Responsive Hover Table</h3>
+            <h3 class="card-title">Applicants Form Responses</h3>
             <div class="card-tools">
                 <button class="btn btn-sm btn-success" onclick="tableToExcel()">Export Table</button>
             </div>
