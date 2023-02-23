@@ -34,14 +34,14 @@
                                 </a>
                             </div>
                             <div class="col-md-5">
-                                <a href="#" class="text-decoration-none">
+                                <a href="{{ route('download-kartu') }}" class="text-decoration-none">
                                     <div class="selection-option team-card d-flex align-items-center px-5">
                                         <div>
                                             <img src="{{ asset('img/card.svg') }}" alt="book icon" width="60">
                                         </div>
                                         <div>
                                             <h3>Team Card</h3>
-                                            <div class="small">Fill your team card</div>
+                                            <div class="small">Download your team card</div>
                                         </div>
                                     </div>
                                 </a>

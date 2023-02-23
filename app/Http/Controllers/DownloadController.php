@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Applicant;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use ZipArchive;
+use Illuminate\Support\Facades\File;
 
 class DownloadController extends Controller
 {
@@ -61,5 +64,28 @@ class DownloadController extends Controller
         );
         return response()->download($path);
         // dd($path);
+    }
+
+    public function downloadKartuPeserta()
+    {
+        $user = Auth::user();
+        $teamUsername = $user->username;
+        // Find all PDF files with the same team name
+        $pdfFiles = File::glob(public_path('storage/kartu-peserta/' . $teamUsername . '_*.pdf'));
+        // Create a new zip file
+        $zip = new ZipArchive();
+        $fileName = $teamUsername . '_kartuPeserta.zip';
+
+        if ($zip->open($fileName, ZipArchive::CREATE) === TRUE) {
+            // Add all PDF files to the zip file
+            foreach ($pdfFiles as $file) {
+                $zip->addFile($file, basename($file));
+            }
+
+            $zip->close();
+        }
+
+        // Download the zip file
+        return response()->download($fileName)->deleteFileAfterSend(true);
     }
 }

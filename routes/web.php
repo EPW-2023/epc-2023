@@ -9,16 +9,6 @@ use App\Http\Controllers\VerificationController;
 use Illuminate\Support\Facades\Route;
 use Mockery\VerificationDirector;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/', function () {
     return redirect('/register');
@@ -44,9 +34,7 @@ Route::get('/login', [ApplicantController::class, 'indexLogin'])->name(
     'applicant-login'
 );
 Route::post('/login', [ApplicantController::class, 'applicantAuth']);
-Route::post('/applicant-logout', [ApplicantController::class, 'logout'])->name(
-    'applicant-logout'
-);
+Route::post('/applicant-logout', [ApplicantController::class, 'logout'])->name('applicant-logout');
 
 //Dashboard
 Route::middleware(['auth'])->group(function () {
@@ -55,6 +43,9 @@ Route::middleware(['auth'])->group(function () {
             'title' => 'EPC Dashboard',
         ]);
     });
+
+    //Download Kartu Peserta Routes
+    Route::get('/download-kartu-peserta', [DownloadController::class, 'downloadKartuPeserta'])->name('download-kartu');
 });
 
 //Dev only
