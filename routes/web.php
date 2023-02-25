@@ -11,8 +11,19 @@ use Mockery\VerificationDirector;
 
 
 Route::get('/', function () {
-    return redirect('/register');
+    return redirect('/registration-closed');
 });
+
+Route::get('/register', function () {
+    return redirect('/registration-closed');
+});
+
+Route::get('/registration-closed', function () {
+    return view('epc.pendaftaran-ditutup', [
+        'title' => 'Registration Closed!'
+    ]);
+});
+
 Route::get('/help', function () {
     return view('help');
 });
@@ -26,8 +37,8 @@ Route::get('/success', function () {
 });
 
 //Registration to Applicants
-Route::get('/register', [ApplicantController::class, 'index']);
-Route::post('/register', [ApplicantController::class, 'store']);
+// Route::get('/register', [ApplicantController::class, 'index']);
+// Route::post('/register', [ApplicantController::class, 'store']);
 
 //Login to Applicants
 Route::get('/login', [ApplicantController::class, 'indexLogin'])->name(
