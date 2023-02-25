@@ -13,17 +13,17 @@
                     <li class="nav-item text-center">
                         <a class="nav-link nav-link-epw" id="nav-link-epw" href="/login">Login</a>
                     </li>
-                    @endguest
-                    @auth()
-                        <li class="nav-item">
-                            <form action="{{ route('applicant-logout') }}" method="POST">
-                                @csrf
-                                <li class="nav-item text-center">
-                                    <a class="nav-link nav-link-epw" id="nav-link-epw" href="/login">Logout</a>
-                                </li>
-                            </form>
-                        </li>
-                    @endauth
+                @endguest
+                @auth()
+                    <li class="nav-item">
+                        <form action="{{ route('applicant-logout') }}" method="POST">
+                            @csrf
+                    <li class="nav-item text-center">
+                        <a class="nav-link nav-link-epw" id="nav-link-epw" href="/applicant-logout">Logout</a>
+                    </li>
+                    </form>
+                    </li>
+                @endauth
             </ul>
         </div>
     </div>

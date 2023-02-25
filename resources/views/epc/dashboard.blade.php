@@ -6,7 +6,7 @@
 @extends('layout.layout')
 @section('content')
     <div class="bg-dashboard">
-        <img src="{{ asset('img/bg-dashboard-batik.png') }}" class="dashboard-batik" alt="batik">
+        {{-- <img src="{{ asset('img/bg-dashboard-batik.png') }}" class="dashboard-batik" alt="batik"> --}}
         @include('partials.navbar-dashboard')
         @if (auth()->user()->verified == 'true')
             <div class="d-flex justify-content-center">
@@ -20,7 +20,7 @@
                     </div>
                     <div class="dashboard-selection">
                         <div class="row mt-5 mx-auto" style="gap: 100px">
-                            <div class="col-md-5">
+                            <div class="col-xl-5">
                                 <a href="{{ $guidebook }}" target="_blank" class="text-decoration-none">
                                     <div class="selection-option guidebook d-flex align-items-center px-5">
                                         <div>
@@ -33,7 +33,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-md-5">
+                            <div class="col-xl-5">
                                 <a href="{{ route('download-kartu') }}" class="text-decoration-none">
                                     <div class="selection-option team-card d-flex align-items-center px-5">
                                         <div>
@@ -48,7 +48,7 @@
                             </div>
                         </div>
                         <div class="row mt-5 mx-auto" style="gap: 100px">
-                            <div class="col-md-5">
+                            <div class="col-xl-5">
                                 <a href="{{ $kisikisi }}" target="_blank" class="text-decoration-none">
                                     <div class="selection-option kisi-kisi d-flex align-items-center px-5">
                                         <div>
@@ -61,7 +61,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-md-5">
+                            <div class="col-xl-5">
                                 <a href="{{ $banksoal }}" target="_blank" class="text-decoration-none">
                                     <div class="selection-option bank-soal d-flex align-items-center px-5">
                                         <div>
