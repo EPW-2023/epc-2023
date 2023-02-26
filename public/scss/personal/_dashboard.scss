@@ -3,6 +3,8 @@ body {
  height: 100%;
  margin: 0;
  padding: 0;
+ background-color: #212384;
+
 }
 
 //success page
@@ -58,6 +60,8 @@ body {
   }
  }
 
+
+
  .guidebook {
   background-color: #AEFDE8;
  }
@@ -74,6 +78,7 @@ body {
   background-color: #D872FF;
  }
 }
+
 
 //registration card
 .epc-card {
@@ -132,4 +137,10 @@ body {
 .white-divider {
  background-color: #fff;
  height: 2px;
+}
+
+@media (max-width: 1200px) {
+ .selection-option {
+  width: 90% !important;
+ }
 }

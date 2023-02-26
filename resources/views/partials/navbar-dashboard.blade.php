@@ -19,7 +19,9 @@
                         <form action="{{ route('applicant-logout') }}" method="POST">
                             @csrf
                     <li class="nav-item text-center">
-                        <a class="nav-link nav-link-epw" id="nav-link-epw" href="/applicant-logout">Logout</a>
+                        <form action="/applicant-logout" method="POST">
+                            <button class="nav-link nav-link-epw btn btn-danger btn-sm" id="nav-link-epw">Logout</button>
+                        </form>
                     </li>
                     </form>
                     </li>

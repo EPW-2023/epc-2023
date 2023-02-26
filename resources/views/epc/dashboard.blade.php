@@ -11,11 +11,13 @@
         @if (auth()->user()->verified == 'true')
             <div class="d-flex justify-content-center">
                 <div class="body-dashboard">
-                    <div class="d-flex align-items-center gap-4">
-                        <img src="{{ asset('img/avatar.svg') }}" alt="avatar" width="150">
-                        <div>
-                            <h3>Hello, {{ auth()->user()->namatim }}</h3>
-                            <a href="#" class="registration-number">{{ auth()->user()->nomer_reg }}</a>
+                    <div class="d-flex">
+                        <div class="d-flex align-items-center gap-4">
+                            <img src="{{ asset('img/avatar.svg') }}" alt="avatar" width="150">
+                            <div>
+                                <h3>Hello, {{ auth()->user()->namatim }}</h3>
+                                <a href="#" class="registration-number">{{ auth()->user()->nomer_reg }}</a>
+                            </div>
                         </div>
                     </div>
                     <div class="dashboard-selection">

@@ -178,6 +178,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: #212384;
 }
 
 .bg-epc-registered {
@@ -293,6 +294,11 @@ body {
   height: 2px;
 }
 
+@media (max-width: 1200px) {
+  .selection-option {
+    width: 90% !important;
+  }
+}
 nav {
   padding: 20px 20px !important;
 }
